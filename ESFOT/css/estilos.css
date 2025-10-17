@@ -1,0 +1,11 @@
+.caja{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    text-align: center;
+    background-color: lightblue;
+    padding: 25px;
+} 
