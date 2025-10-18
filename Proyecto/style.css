@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap'); /* Fuente similar a la de las imágenes */
+
+:root {
+    --text-color: #333;
+    --light-grey: #f0f0f0;
+    --medium-grey: #ccc;
+    --dark-grey: #666;
+    --button-color: #999; /* Para el botón "Registrarse" del header y el botón de inicio de sesión */
+    --primary-button-color: #888; /* Para el botón "Comienza ahora" */
+    --white: #fff;
+    --border-radius: 8px;
+}
+
+body {
+    font-family: 'Space Mono', monospace; /* Usando Space Mono como una aproximación */
+    margin: 0;
+    padding: 0;
+    background-color: var(--white); /* Fondo blanco general */
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header (Page 1) */
+header {
+    background-color: var(--white);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--light-grey);
+    position: sticky; /* Para que la barra de navegación siempre esté visible */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sutil sombra para el header */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2.5em;
+    margin: 0;
+    color: var(--text-color);
+    letter-spacing: -1px; /* Para un efecto similar al de la imagen */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark-grey);
+    font-size: 1.1em;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--text-color);
+}
+
+.button {
+    background-color: var(--button-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: var(--dark-grey);
+}
+
+.primary-button {
+    background-color: var(--primary-button-color);
+    padding: 15px 30px;
+    font-size: 1.2em;
+}
+
+.primary-button:hover {
+    background-color: var(--dark-grey);
+}
+
+
+/* General Page Styling */
+.page {
+    padding: 80px 0; /* Espaciado superior e inferior para las secciones */
+    min-height: calc(100vh - 80px); /* Ajustar altura para que ocupe al menos la pantalla restante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content-section {
+    background-color: var(--white); /* Fondo blanco para las secciones de contenido */
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: var(--dark-grey);
+}
+
+/* Page 2: Descubre lo que ALU tiene para ofrecer */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espacio entre las cajas */
+    flex-wrap: wrap; /* Para que las cajas se adapten en pantallas pequeñas */
+    margin-top: 40px;
+}
+
+.feature-box {
+    background-color: var(--light-grey);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    width: 280px; /* Ancho fijo para las cajas */
+    min-height: 150px; /* Altura mínima para que tengan un tamaño similar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sutil sombra para las cajas */
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+.feature-box h3 {
+    font-size: 1.2em;
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* Page 3: Tutorial */
+.video-placeholder {
+    width: 80%; /* Ancho del reproductor de video */
+    max-width: 700px; /* Ancho máximo */
+    height: 400px; /* Altura del reproductor de video */
+    background-color: #000; /* Fondo negro como un reproductor de YouTube */
+    margin: 0 auto;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Para posicionar el logo de YouTube si lo pones */
+    overflow: hidden;
+}
+
+.video-placeholder::before {
+    content: '';
+    position: absolute;
+    width: 60px; /* Tamaño del logo de YouTube */
+    height: 42px; /* Proporción del logo de YouTube */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="red"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.273 8.783c.257.653.376 1.348.376 2.057 0 .71-.119 1.405-.376 2.057-.229.58-.593 1.09-1.077 1.503-1.666 1.41-3.79 2.106-6.196 2.106-2.405 0-4.53-.696-6.196-2.106-.484-.413-.848-.923-1.077-1.503-.257-.653-.376-1.348-.376-2.057 0-.71.119-1.405.376-2.057.229-.58.593-1.09 1.077-1.503 1.666-1.41 3.79-2.106 6.196-2.106 2.405 0 4.53.696 6.196 2.106.484.413.848.923 1.077 1.503z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.9;
+    z-index: 1;
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+
+/* Page 5: Iniciar Sesión */
+.form-section {
+    background-color: var(--white);
+    padding: 80px 20px;
+}
+
+.form-container {
+    background-color: var(--light-grey);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left; /* Alinea el contenido del formulario a la izquierda */
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: calc(100% - 20px); /* Ajusta el ancho para el padding */
+    padding: 12px 10px;
+    border: 1px solid var(--medium-grey);
+    border-radius: var(--border-radius);
+    font-size: 1em;
+    background-color: var(--white);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px; /* Tamaño del checkbox */
+    height: 18px;
+    accent-color: var(--button-color); /* Color del checkbox al seleccionarlo */
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-size: 1em;
+}
+
+.form-container .button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 1em;
+    color: var(--dark-grey);
+}
+
+.signup-link a {
+    color: var(--button-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 15px 10px;
+    }
+
+    .logo {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-box {
+        width: 80%; /* Más ancho en pantallas pequeñas */
+        max-width: 350px;
+    }
+
+    .video-placeholder {
+        height: 250px; /* Ajustar altura del video */
+        width: 90%;
+    }
+
+    .form-container {
+        padding: 30px;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .page {
+        padding: 50px 0;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    nav ul li a, .button {
+        font-size: 1em;
+    }
+
+    .primary-button {
+        font-size: 1.1em;
+        padding: 12px 25px;
+    }
+}
