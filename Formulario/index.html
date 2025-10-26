@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Formulario de Registro</h1>
+        <h2><span>Realizado por:</span> <i style="color: red;">Carlos Puente</i></h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <label>Nombre completo:</label>
+            <input type="text" name="nombre" placeholder="Ingresa tu nombre" required>
+            <label>Contraseña</label>
+            <input type="password" name="password" placeholder="Crea una contraseña" required>
+            <label>Correo electrónico:</label>
+            <input type="email" name="email" placeholder="usuario@correo.com" required>
+            <label>Edad:</label>
+            <input type="number" name="edad" placeholder="Ingresa tu edad" required>
+            <label>Teléfono:</label>
+            <input type="tel" name="telefono" placeholder="+593" required>
+            <label>Página web:</label>
+            <input type="url" name="pagina_web" placeholder="https://tusitio.com" required>
+            <label>Fecha de nacimiento:</label>
+            <input type="date" name="fecha_nacimiento" required>
+            <label>Hora de cita:</label>
+            <input type="time" name="hora_cita" required>
+            <label>Fecha y hora del evento</label>
+            <input type="datetime-local" name="fecha_hora_evento" required>
+            <label>Mes de pago</label>
+            <input type="month" name="mes_pago" required>
+            <label>Semana actual</label>
+            <input type="week" name="semana_actual" required>
+            <label>Color favorito</label>
+            <input type="color" name="color_favorito" required>
+            <label>Nivel de satisfacción</label>
+            <input type="range" name="nivel_satisfaccion" min="0" max="10" required>
+            <label>Género</label>
+            <input type="radio" name="genero" value="masculino" required> Masculino
+            <input type="radio" name="genero" value="femenino" required> Femenino
+            <label>Intereses</label>
+            <input type="checkbox" name="intereses" value="deportes"> Deportes
+            <input type="checkbox" name="intereses" value="tecnologia"> Tecnología
+            <input type="checkbox" name="intereses" value="viajes"> Arte
+            <label>Subir archivo:</label>
+            <input type="file" name="foto">
+            <input type="hidden" name="id" value="001">
+            <div class="buttons">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
