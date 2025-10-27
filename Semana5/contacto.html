@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ElectroStation - Contacto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <span>Electro</span> <strong>Station</strong>
+        </div>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </label>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="app.html">App</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#" class="login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-map-section" id="contacto">
+            <div class="contact-map-content"> 
+                
+                <div class="contact-form">
+                    <h3>¿Tienes preguntas? Escríbenos</h3>
+                    <form action="">
+                        <input type="text" placeholder="Nombre" class="form-input" required>
+                        <input type="email" placeholder="Correo" class="form-input" required>
+                        <input type="tel" placeholder="Celular" class="form-input">
+                        <textarea placeholder="Observaciones" class="form-textarea"></textarea>
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">Términos y condiciones</label>
+                        </div>
+                        <button type="submit" class="submit-button">Enviar</button>
+                    </form>
+                </div>
+
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5522.426874651287!2d-102.43234567794836!3d19.958544221952817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842e8b368e45f015%3A0x72de80a66e4e99dd!2sEstatua%20de%20%22Jaimito%2C%20El%20Cartero%22!5e1!3m2!1sen!2sec!4v1761572025915!5m2!1sen!2sec" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Mapa de ubicación">
+                    </iframe>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-column social-media">
+                <h4>Síguenos en redes</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-column links-of-interest">
+                <h4>Enlaces de interés</h4>
+                <nav class="footer-links">
+                    <a href="#">Soporte técnico</a>
+                    <a href="#">Blog de noticias</a>
+                    <a href="#">Preguntas frecuentes (FAQ)</a>
+                </nav>
+            </div>
+            <div class="footer-column contact-info">
+                <h4>Llámanos</h4>
+                <p>(593) 995644186</p>
+                <h4>Escríbenos</h4>
+                <p><a href="mailto:electrostalion@gmail.com">electrostalion@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© Derechos Reservados · Carlos</p>
+        </div>
+    </footer>
+
+</body>
+</html>
