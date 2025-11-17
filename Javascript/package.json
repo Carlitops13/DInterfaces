@@ -1,0 +1,10 @@
+{
+  "name": "ejercicios-js",
+  "version": "1.0.0",
+  "description": "Ejercicios de estructuras de control, arreglos y funciones",
+  "main": "exercises.js",
+  "scripts": {
+    "start": "node exercises.js",
+    "demo": "node exercises.js --demo"
+  }
+}
